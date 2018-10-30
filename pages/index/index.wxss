@@ -1,21 +1,145 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/**home.wxss**/
+.rui-home-banner{
+  width: 100vw;
+  height: 66.666667vw;
+}
+.rui-home-title{
+  padding-top: 34rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  font-size: 4.8vw;
+  color: #fff;
+  text-align: center;
+  width: 100vw;
+}
+/* nav */
+.rui-home-nav{
+  width:93.6vw;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 4vw 0;
+  border-radius: 2vw;
+  box-shadow: -0 -0 5px #06B1FE;
+  position: absolute;
+  top: -13vw;
+  left: 3.2vw;
+}
+.rui-home-nav-li{
+  width: 25%;
+  float: left;
+  text-align: center;
+  font-size: 4vw;
+  overflow: hidden;
+}
+.rui-home-nav-img{
+  width: 12.8vw;
+  height: 12.8vw;
+  display: block;
+  margin: 0 auto;
+}
+.rui-home-nav-text{
+  font-size: 3.7vw;
+  color: #575757;
+  margin-top: 2vw;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+/* hot */
+.rui-home-hot{
+  margin-top: 24vw;
+  padding: 0 3.5vw 2.8vw;
+  border-bottom: 2vw solid #eee;
+}
+.rui-home-icon{
+  width: 5.2vw;
+  height: 6.3vw;
+  vertical-align: middle;
+  margin-right: 2.5vw;
+}
+.rui-home-hot-head{
+  font-size: 4.5vw;
+}
+.rui-home-hot-img{
+  width: 15.2vw;
+  height: 15.8666667vw;
+  display: block;
+  margin: 0 auto;
+}
+.rui-home-hot-text{
+  color: #333;
+  font-size: 3.2vw;
+  text-align: center;
+  margin-top: 1.3333vw;
+}
+.rui-home-hot-li{
+  width: 33.33333%;
+  float: left;
+}
+.rui-swiper-box{
+  height: 29vw;
+}
+.rui-home-all{
+  float: right;
+  color: #B1B1B1;
+  font-size: 3.5vw;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+/* card */
+.rui-card-content{
+  padding-top: 4vw;
+  height: 35vw;
 }
 
-.usermotto {
-  margin-top: 200px;
+.rui-card-li{
+  width: 86vw;
+  height: 34vw;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 16.3vw;
+  padding-top: 6vw;
+  color: #fff;
+}
+.rui-card-icon1{
+  width: 8.66667vw;
+  height: 8.66667vw;
+  position: absolute;
+  top: 6vw;
+  left: 3vw;
+}
+.rui-card-btn{
+  font-size: 4vw;
+  position: absolute;
+  bottom: 8vw;
+  right: 3.2vw;
+}
+
+/* theme */
+.rui-theme-head{
+  margin-top: 3.066667vw;
+  margin-bottom: 4.8vw;
+  font-size: 4vw;
+  color: #333;
+  position: relative;
+  padding-left: 8vw;
+}
+.rui-theme-li{
+  float: left;
+  width: 50%;
+  font-size: 3.7vw;
+  color: #808080;
+  margin-bottom: 3vw;
+}
+.rui-theme-list{
+  border-bottom: 2vw solid #eee;
+  padding: 0 3.5vw;
+}
+.rui-theme-list:last-child{border: none;}
+.rui-theme-icon{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }

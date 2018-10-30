@@ -1,13 +1,117 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<!-- 引入主题服务模板 -->
+<import src="../../src/template/themeService.wxml"/>
+
+<view class='rui-content'>
+  <view class='rui-home-title' style='background-color:{{navbarBgColor}}'>四川政务服务</view>
+  <view class='rui-pr'><image class='rui-home-banner' src='../../src/images/banner.png'></image></view>
+  <!-- 导航 -->
+  <view class='rui-pr'>
+    <view class='rui-home-nav'>
+      <view class='rui-home-nav-li'>
+        <image class='rui-home-nav-img' src='../../src/images/nav2.png'></image>
+        <view class='rui-home-nav-text'>在线约</view>
+      </view>
+      <view class='rui-home-nav-li'>
+        <image class='rui-home-nav-img' src='../../src/images/nav3.png'></image>
+        <view class='rui-home-nav-text'>查办件</view>
+      </view>
+      <view class='rui-home-nav-li'>
+        <image class='rui-home-nav-img' src='../../src/images/nav4.png'></image>
+        <view class='rui-home-nav-text'>快递跟踪</view>
+      </view>
+      <view class='rui-home-nav-li'>
+        <image class='rui-home-nav-img' src='../../src/images/nav5.png'></image>
+        <view class='rui-home-nav-text'>12345在线</view>
+      </view>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <!-- 热门推荐 -->
+  <view class='rui-home-hot'>
+    <view class='rui-home-hot-head'>
+      <image class='rui-home-icon' src='{{staticPicture.hotIcon}}'></image>热门推荐
+    </view>
+    <swiper class="rui-swiper-box" indicator-dots="false" interval="3000" duration="500" indicator-color="#eee" indicator-active-color="#06b1fe">
+      <swiper-item>
+        <view class="rui-home-hot-li">
+          <image class='rui-home-hot-img' src="../../src/images/hot1.png"  mode="aspectFill"/>
+          <view class='rui-home-hot-text'>公积金查询</view>
+        </view>
+        <view class="rui-home-hot-li">
+          <image class='rui-home-hot-img' src="../../src/images/hot5.png"  mode="aspectFill"/>
+          <view class='rui-home-hot-text'>新生儿重名</view>
+        </view>
+        <view class="rui-home-hot-li">
+          <image class='rui-home-hot-img' src="../../src/images/hot2.png"  mode="aspectFill"/>
+          <view class='rui-home-hot-text'>社保卡状态</view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="rui-home-hot-li">
+          <image class='rui-home-hot-img' src="../../src/images/hot4.png"  mode="aspectFill"/>
+          <view class='rui-home-hot-text'>身份证进度</view>
+        </view>
+        <view class="rui-home-hot-li">
+          <image class='rui-home-hot-img' src="../../src/images/hot3.png"  mode="aspectFill"/>
+          <view class='rui-home-hot-text'>生活缴费</view>
+        </view>
+        <view class="rui-home-hot-li">
+          <image class='rui-home-hot-img' src="../../src/images/hot6.png"  mode="aspectFill"/>
+          <view class='rui-home-hot-text'>住建工程项目</view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 我的卡包 -->
+  <view class='rui-home-hot' style='margin-top:4vw;'>
+    <view class='rui-home-hot-head'>
+      <image class='rui-home-icon' src='{{staticPicture.cardIcon}}'></image>我的卡包
+      <text class='rui-home-all'>查看全部</text>
+    </view>
+    <swiper next-margin="30rpx" class="rui-card-content" indicator-dots="false" interval="3000" duration="500" indicator-color="#fff" indicator-active-color="#06b1fe">
+      <swiper-item>
+        <view class='rui-card-li' style="background:url('../../src/images/bg1.png') center center/100% 100%;">
+          <image class='rui-card-icon1' src='{{staticPicture.zhufangIcon}}'></image>
+          <view class='rui-fs30'>四川省住房公积金管理中心</view>
+          <view class='rui-fs36 rui-mt18'>住房公积金</view>
+          <view class='rui-fs24 rui-mt18'>
+            <text>缴存明细</text>
+            <text class='rui-ml30'>公积金提取</text>
+          </view>
+          <view class='rui-btn rui-card-btn'>未关联</view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='rui-card-li' style="background:url('../../src/images/bg2.png') center center/100% 100%;">
+          <image class='rui-card-icon1' style="width:9.86667vw;height:7.06667vw;" src='{{staticPicture.shenfenIcon}}'></image>
+          <view class='rui-fs30'>四川省人力资源和社会保障厅</view>
+          <view class='rui-fs36 rui-mt18'>社会保障卡</view>
+          <view class='rui-fs24 rui-mt18'>
+            <text>社保查询</text>
+            <text class='rui-ml30'>医保查询</text>
+          </view>
+          <view class='rui-btn rui-card-btn'>未关联</view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='rui-card-li' style="background:url('../../src/images/bg2.png') center center/100% 100%;">
+          <image class='rui-card-icon1' style="width:9.86667vw;height:7.06667vw;" src='{{staticPicture.shenfenIcon}}'></image>
+          <view class='rui-fs30'>四川公安厅</view>
+          <view class='rui-fs36 rui-mt18'>身份证网证</view>
+          <view class='rui-fs24 rui-mt18'>
+            <text>同名查询</text>
+            <text class='rui-ml30'>身份证寄递查询</text>
+          </view>
+          <view class='rui-btn rui-card-btn'>未关联</view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 主题服务 -->
+  <view class='rui-home-hot' style='margin-top:4vw;border:none;padding:0;'>
+    <view class='rui-home-hot-head' style='padding: 0 3.5vw;'>
+      <image class='rui-home-icon' src='{{staticPicture.serviceIcon}}'></image>主题服务
+    </view>
+    <!-- 服务列表 -->
+    <template is="themeService" data="{{themeService}}"></template>
   </view>
 </view>
