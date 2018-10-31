@@ -1,0 +1,6 @@
+<!--component/navbar/navbar.wxml-->
+<view class='rui-public-start' style='height:{{startBarHeight}}px;'></view>
+<view class="rui-public-nav">
+  <image src='{{_backIcon}}' class='rui-back-icon' bindtap='_navback'></image>
+  {{navOPts.title}}
+</view>

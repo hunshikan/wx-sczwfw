@@ -1,0 +1,23 @@
+/* component/navbar/navbar.wxss */
+.rui-public-start{
+  height: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.rui-public-nav{
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #fff;
+  position: relative;
+  padding: 0 44px;
+}
+.rui-back-icon{
+  width: 22px;
+  height: 14px;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 17px;
+  left: 15px;
+}
