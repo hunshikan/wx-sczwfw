@@ -1,5 +1,7 @@
+
+<!-- 首页主题服务列表 -->
 <template name="themeService">
-  <view class='rui-theme-list' wx:for="{{themeService.serviceArr}}" wx:key="themeService" wx:if="{{item.iconUrl}}" data-url="{{item.navigateUrl}}" bindtap='jumpMethod'>
+  <view class='rui-theme-list' wx:for="{{themeService.serviceArr}}" wx:key="themeService" wx:if="{{item.iconUrl}}" data-url="{{item.navigateUrl}}" data-type="{{item.type}}" bindtap='jumpMethod'>
     <view class='rui-theme-head'>
       <image class='rui-theme-icon' src='{{item.iconUrl}}'></image>{{item.title}}
       <text class='rui-more-icon' style="background:url('{{themeService.moreIcon}}') center center/100% 100%;"></text>
@@ -9,3 +11,20 @@
     </view>
   </view>
 </template>
+
+<!-- 主题服务子页面模板 -->
+<template name="pageService">
+  <view class='rui-content'>
+    <view class='rui-page-banner'>
+      <image src='{{pageService.bannerUrl}}' class='rui-page-banner-img'></image>
+    </view>
+    <view class='rui-page-list'>
+      <view wx:for="{{pageService.list}}" wx:key="pageService" class='rui-page-li' bindtap='jumpMethod' data-url="{{item.jumpPath}}">
+        <image class='rui-page-icon' src='{{item.iconPath}}'></image>
+        {{item.title}}
+        <image class='rui-page-more-icon' src='{{pageService.moreIcon}}'></image>
+      </view>
+    </view>
+  </view>
+</template>
+

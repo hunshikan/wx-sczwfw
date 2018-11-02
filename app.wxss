@@ -8,3 +8,119 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.rui-content{
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 0 auto;
+  color: #575757;
+}
+
+/* float */
+.rui-fr{float: right;}
+.rui-fl{float: left;}
+.rui-clear:after{
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* font-size */
+.rui-fs12{font-size: 1.6vw;}
+.rui-fs14{font-size: 1.86667vw;}
+.rui-fs16{font-size: 2.13333vw;}
+.rui-fs18{font-size: 2.4vw;}
+.rui-fs20{font-size: 2.66667vw;}
+.rui-fs22{font-size: 2.93333vw;}
+.rui-fs24{font-size: 3.2vw;}
+.rui-fs26{font-size: 3.46667vw;}
+.rui-fs28{font-size: 3.58974vw;}
+.rui-fs30{font-size: 4vw;}
+.rui-fs34{font-size: 4.53333vw;}
+.rui-fs36{font-size: 4.8vw;}
+
+/* margin */
+/* top */
+.rui-mt16{margin-top: 2.13333vw;}
+.rui-mt18{margin-top: 2.4vw;}
+.rui-mt20{margin-top: 2.66667vw;}
+
+/* left */
+.rui-ml16{margin-left: 2.13333vw;}
+.rui-ml18{margin-left: 2.4vw;}
+.rui-ml20{margin-left: 2.66667vw;}
+.rui-ml30{margin-left: 4vw;}
+
+/* position  */
+.rui-pr{position: relative;}
+.rui-full{width: 100%;}
+
+
+/* icon */
+.rui-theme-icon{
+  width: 6vw;
+  height: 6vw;
+  vertical-align: middle;
+  margin-right: 2.5vw;
+}
+.rui-more-icon{
+  width: 2vw;
+  height: 3.0666667vw;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+/* btn */
+.rui-btn{
+  display: inline-block;
+  color: #01A6E8;
+  background-color: #fff;
+  /* color: #fff;
+  background-color: blue; */
+  font-size: 2.66667vw;
+  padding: 1.6vw 2vw;
+  border-radius: 1.3333vw;
+}
+
+
+page{background-color: #eee;}
+.rui-page-banner{
+  width: 100vw;
+  height: 40vw;
+  background-color: #fff;
+}
+.rui-page-banner-img{
+  width: 100vw;
+  height: 40vw;
+  box-sizing: border-box;
+  border: 1px dashed #333;
+}
+.rui-page-li{
+  width: 100vw;
+  height: 16vw;
+  line-height: 16vw;
+  background-color: #fff;
+  font-size: 4vw;
+  margin-top: 2.8vw;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 6.7vw 0 17vw;
+  color: #808080;
+}
+.rui-page-icon{
+  width: 7.6vw;
+  height: 7.6vw;
+  position: absolute;
+  top: 3.6vw;
+  left: 4vw;
+}
+.rui-page-more-icon{
+  width: 2.4vw;
+  height: 4vw;
+  position: absolute;
+  top: 6vw;
+  right: 4.3vw;
+}

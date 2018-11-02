@@ -1,0 +1,22 @@
+<!--pages/menu/menu.wxml-->
+<!-- <navbar nav-opts="{{navOpts}}"></navbar> -->
+<!-- <view class='rui-content'>
+  <view class='rui-page-banner'>
+    <image src='../../src/images/htcx/jtcx_3x.png' class='rui-page-banner-img'></image>
+  </view>
+  <view class='rui-page-list'>
+    <view class='rui-page-li' bindtap='jumpMethod' data-url="http://www.sczwfw.gov.cn/app/weixinApply/queryApplyForWeixin">
+      <image class='rui-page-icon' src='../../src/images/htcx/jdcwf_3x.png'></image>
+      车辆违章查询
+      <image class='rui-page-more-icon' src='../../src/images/more-icon.png'></image>
+    </view>
+    <view class='rui-page-li'>
+      <image class='rui-page-icon' src='../../src/images/htcx/jsrwf_3x.png'></image>
+      车辆年检查询
+      <image class='rui-page-more-icon' src='../../src/images/more-icon.png'></image>
+    </view>
+  </view>
+</view> -->
+
+<import src="../../src/template/themeService.wxml"/>
+<template is="pageService" data="{{pageService}}"></template>

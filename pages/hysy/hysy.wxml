@@ -1,0 +1,3 @@
+<!--pages/hysy/hysy.wxml-->
+<import src="../../src/template/themeService.wxml"/>
+<template is="pageService" data="{{pageService}}"></template>

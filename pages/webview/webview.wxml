@@ -1,0 +1,3 @@
+<!--pages/webview/webview.wxml-->
+<!-- <navbar nav-opts="{{navOpts}}"></navbar> -->
+<web-view src="{{url}}"></web-view>

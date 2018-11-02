@@ -1,0 +1,9 @@
+<!--pages/city/city.wxml-->
+<view class='rui-content'>
+  <view class='rui-page-list'>
+      <view class='rui-page-li' bindtap='jumpMethod' wx:for="{{cities}}" wx:key="cities" data-city="{{item.city}}" data-code='{{item.adCode}}'>
+        {{item.city}}
+        <image class='rui-page-more-icon' src='{{staticPicture.moreIcon}}'></image>
+      </view>
+    </view>
+</view>

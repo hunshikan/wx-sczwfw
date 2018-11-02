@@ -1,0 +1,4 @@
+/* pages/city/city.wxss */
+.rui-page-li{
+  padding-left: 6vw;
+}

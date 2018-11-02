@@ -1,12 +1,26 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/authentication/authentication",
+    "pages/menu/menu",
+    "pages/consult/consult",
+    "pages/mine/mine",
+    "component/navbar/navbar",
+    "pages/webview/webview",
+    "pages/shbx/shbx",
+    "pages/gjj/gjj",
+    "pages/ylws/ylws",
+    "pages/zfjs/zfjs",
+    "pages/hysy/hysy",
+    "pages/hjbl/hjbl",
+    "pages/shjf/shjf",
+    "pages/qzzp/qzzp",
+    "pages/city/city"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "四川政务服务",
+    "navigationBarTextStyle": "black"
   }
 }
