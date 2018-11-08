@@ -25,11 +25,28 @@ Page({
     navbarBgColor: 'rgba(50, 50, 50, 0)',
     themeService: [],
     staticPicture: {},
-    cityOpts: {},
-    loginStatus: false
+    flag: 0,
+    showStatus: 'none', 
+    heightStatus: '100vh',
+    cityOpts: {
+      city: '成都市',
+      temperature: '16℃ ～ 8℃',
+      date: staticMethod._getNewDateDay().day
+    },
+    loginStatus: false,
+    statusIndex: 0,
+    // 当前分类的索引
+    currentCategory: 0,
+    // 每个分类距离顶部的高度的数组
+    productsTop: [],
+    categoryTop: 10000,
+    // 用于存储每次滚动结束之后的距离, 可用来判断滚动的方向
+    moveStartPos: 0,
+    // 点击分类的名称, 用于点击跳转
+    scrollInTo: ''
   },
   onLoad(){
-    // console.log(staticPath)
+    // console.log(staticMethod._getNewDateDay())
     this.setData({ themeService: themeService, staticPicture: staticPicture, staticPath: staticPath});
   },
   onShow(){
@@ -37,9 +54,13 @@ Page({
     staticMethod._getCurrentCityMsg(this);
     // 获取昵称和头像
     let loginMsg = wx.getStorageSync('loginMsg');
+    // console.log(loginMsg)
     if (loginMsg){
       this.setData({ loginMsg: loginMsg, loginStatus: true});
     }
+  },
+  goToLogin(){
+    staticMethod._jumpMethod({url: '../../pages/login/login'});
   },
   // 获取用户手机号码
   getPhoneNumber(e){
@@ -58,87 +79,111 @@ Page({
   },
   // 跳转页面
   jumpMethod(e) {//如果type值为webview就跳转webview页面，否侧跳转对应二级页面
-    /*
-    * 首页跳转函数说明
-    * 1. 首先判断是否需要登录，并且userId是否为空？如果条件成立，提示用户需要完成登录！否则说明该页面不需要登录，或者已经登录！
-    * 2. 判断跳转的是web-view页面还是其他二级页面？如果其他二级页面，获取type值跳转！否则需要对web-view的url进行处理！
-    * 3. 判断url中是否存在‘身份证号密文’或者‘加密的登录信息’？如果存在，说明需要进行身份信息认证！否则直接跳转改web-view页面！
-    * 4. 判断loginMsg中idNumber是否为空？如果为空，说明用户还未进行验证，需要跳转验证页面！否则说明信息已经验证，直接处理验证信息！
-    * 5. 判断url中是否存在‘身份证号密文’？如果存在，说明需要身份证信息加密替换！
-    * 6. 判断url中是否存在‘加密的登录信息’？如果存在，说明需要登录信息加密替换！
-    * 注：判断的层级很重要，是对不同url的处理，不要轻易调换！
-    */
-
-    let typeVal = e.currentTarget.dataset.type;
-    let status = e.currentTarget.dataset.status;
-    let loginMsg = wx.getStorageSync('loginMsg') || {};
-    // 判断是否需要提示登录
-
-    if (status === '1' && loginMsg.idForStr === ''){
+    staticMethod._jumpWebview(e,this);
+  },
+  // 非webview页面跳转
+  jumpMethod1(e){
+    let loginMsg = wx.getStorageSync('loginMsg') || { idForStr: '', idNumber: '' };
+    if (loginMsg.idForStr == ''){
       wx.showToast({
         icon: 'none',
-        title: '请您完成登录！'
+        title: '请您先进行登录操作！',
+        success: res => {
+          setTimeout(res => {
+            staticMethod._jumpMethod({ url: '../../pages/login/login' });
+          },1000);
+        }
       })
       return false;
-    }else{
-      // 判断跳转web-view页面
-      if (typeVal === 'webview') {
-        let cityOpts = this.data.cityOpts;
-        let url = e.currentTarget.dataset.url;
-        url = url.replace(/地域编码/g, cityOpts.adCode);
-        // 判断是否需要身份证信息
-        console.log(url)
-        if (url.indexOf('身份证号密文') != -1 || url.indexOf('加密的登录信息') != -1){//需要身份信息的webview
-          // 判断是否有身份信息
-          if (loginMsg) {//没有身份证号，需要去验证
-            staticMethod._jumpMethod({
-              url: '../../pages/authentication/authentication'
-            })
-          } else {//有身份证号，直接加密登录
-            if (url.indexOf('身份证号密文') != -1){//如果是身份证号密文，此处提换
-              let idNumber = loginMsg.idNumber;
-              let encry = DecryptAndEncrypt.Encrypt('510824199004065633');
-              url = url.replace(/身份证号密文/g, encry);
-              url = staticMethod._urlEncrypt(url);
-            }
-            if (url.indexOf('加密的登录信息') != -1){//如果是登录信息密文，此处提换
-              let loginOpts = {
-                idCardNumber: loginMsg.idNumber,
-                phone: loginMsg.phoneNumber,
-                userId: loginMsg.idForStr,
-                userName: loginMsg.realName
-              }
-              
-              let encryLogin = DecryptAndEncrypt.Encrypt(JSON.stringify(loginOpts));
-              url = url.replace(/加密的登录信息/g, encryLogin);
-              url = staticMethod._urlEncrypt(url);
-            }
-            // url处理完成，进行跳转
-            staticMethod._jumpMethod({
-              url: '../../pages/webview/webview?url=' + url
-            })
-          }
-        }else{//不需要身份信息的webview
-          staticMethod._jumpMethod({
-            url: '../../pages/webview/webview?url=' + url
-          })
+    }
+    if (loginMsg.idNumber == '') {
+      wx.showToast({
+        icon: 'none',
+        title: '请您先认证操作！',
+        success: res => {
+          setTimeout(res => {
+            staticMethod._jumpMethod({ url: '../../pages/authentication/authentication' });
+          }, 1000);
         }
-      } else {//跳转正常二级页面
-        staticMethod._jumpMethod({
-          url: e.currentTarget.dataset.url + '?type=' + typeVal
-        })
-      }
+      })
+      return false;
     }
-    // console.log(e.currentTarget.dataset.url);
-    // console.log(e.currentTarget.dataset.type);
-    // console.log(e.currentTarget.dataset.url + '?type=' + e.currentTarget.dataset.type);
+
+    let url = e.currentTarget.dataset.url;
+    staticMethod._jumpMethod({url: url});
   },
-  onPageScroll(e){
-    let transparen = e.scrollTop / 200;
-    transparen = transparen < 1 ? transparen : 1;
-    // console.log(transparen)
-    if (transparen <= 1){
-      this.setData({ navbarBgColor: 'rgba(50, 50, 50, ' + transparen + ')' });
+  getStatus(e){
+    let index = e.currentTarget.dataset.index;
+    let indexInfo = e.currentTarget.dataset.text;
+    this.setData({ scrollInTo: indexInfo, currentCategory: index});
+  },
+  // 页面滚动
+  scrolling(e) {
+    // console.log(e.detail.scrollTop);
+    let scrollTop = e.detail.scrollTop;
+    let productsTop0 = this.data.productsTop0;
+    if (scrollTop >= productsTop0[1].top && this.data.flag == 0){
+      this.setData({showStatus: 'block',heightStatus: 'calc(100vh - 13vw);',flag: 1});
+    } else if (scrollTop < productsTop0[1].top && this.data.flag == 1){
+      this.setData({ showStatus: 'none', heightStatus: '100vh', flag: 0 });
     }
+    // this.onScrollViewScroll({ scrollTop: e.detail.scrollTop });
+  },
+  onScrollViewScroll(e) {
+    // 当前滚动的距离
+    let scrollTop = e.scrollTop
+    // moveStartPos记录着上一次滚动完成时的位置, 用于判断滚动方向
+    // 如果现在的滚动距离大于moveStartPos说明正在往下滚动
+    if (scrollTop > this.data.moveStartPos) {
+      this.data.moveStartPos = scrollTop;
+      this.setData({ moveStartPos: scrollTop });
+      // 遍历每个商品距离顶部的距离
+      this.data.productsTop.forEach((item, index) => {
+        // 如果滚动的距离大于某个商品到顶部的距离说明该商品到了顶部, 减10是为了减少触发距离
+        if (scrollTop > item.top - 10) {
+          // 当前分类的索引小于满足条件的商品索引就赋值, 跳到下一个分类
+          if (this.data.currentCategory < index) {
+            this.data.currentCategory = index;
+            this.setData({ currentCategory: index });
+          }
+        }
+      })
+      // 如果现在的滚动距离小于moveStartPos说明正在往上滚动    
+    } else if (scrollTop < this.data.moveStartPos) {
+      this.data.moveStartPos = scrollTop;
+      this.setData({ moveStartPos: scrollTop });
+
+      this.data.productsTop.forEach((item, index) => {
+        if (scrollTop < item.top - 10) {
+          if (this.data.currentCategory >= index) {
+            this.data.currentCategory = index ? index - 1 : index;
+            this.setData({ currentCategory: index ? index - 1 : index });
+          }
+        }
+      })
+    }
+    console.log(this.data.currentCategory)
+  },
+  onReady() {
+    // 页面准备完成之后获取每个分类距离顶部的高度, 存储在数组productsTop中
+    var query = wx.createSelectorQuery()
+    let productsTop = [];
+    let productsTop0 = [];
+    query.selectAll('.rui-theme-list').boundingClientRect((rect) => {
+      rect.forEach((item, index) => {
+        productsTop.push({ top: item.top })
+      })
+      this.setData({ productsTop: productsTop })
+    })
+    query.selectAll('.rui-theme-nav-scroll').boundingClientRect((rect) => {
+      rect.forEach((item, index) => {
+        productsTop0.push({ top: item.top })
+      })
+      // console.log(productsTop0)
+      this.setData({ productsTop0: productsTop0 })
+    })
+    query.selectAll('.rui-theme-nav-scroll').boundingClientRect((rect) => {
+      this.setData({ categoryTop: rect[0].top })
+    }).exec()
   }
 })

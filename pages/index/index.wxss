@@ -1,5 +1,9 @@
 /**home.wxss**/
 page{background-color: #fff;}
+.rui-category-scroll{
+  width: 100%;
+  height: 100vh;
+}
 .rui-home-banner-left{
   position: absolute;
   top: 4vw;
@@ -71,6 +75,9 @@ page{background-color: #fff;}
 }
 /* nav */
 .rui-home-nav{
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
   width:93.6vw;
   background-color: #fff;
   box-sizing: border-box;
@@ -171,8 +178,8 @@ page{background-color: #fff;}
 
 /* theme */
 .rui-theme-head{
-  margin-top: 3.066667vw;
-  margin-bottom: 4.8vw;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
   font-size: 4vw;
   color: #333;
   position: relative;
@@ -205,4 +212,29 @@ page{background-color: #fff;}
   position: absolute;
   top: 0;
   right: 0;
+}
+.rui-theme-nav-scroll{
+  width: 100%;
+  box-sizing: border-box;
+  padding:  0 3.5vw;
+  font-size: 3.73vw;
+  color: #808080;
+  background-color: #fff;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: sticky;
+  position: --webkit-sticky;
+  top: -1px;
+  z-index: 1000;
+}
+.rui-theme-nav-li{
+  display: inline-block;
+  height: 12vw;
+  line-height: 12vw;
+  padding: 0 2vw;
+  border-bottom:  1vw solid transparent;
+}
+.rui-theme-nav-li.rui-active{
+  color: #01A6E8;
+  border-color: #01A6E8;
 }

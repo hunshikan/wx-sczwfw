@@ -1,1 +1,36 @@
 /* pages/authentication/authentication.wxss */
+page{background-color: #fff;}
+.rui-content{
+  padding: 12vw 10vw;
+  border-top: 1px solid #eee;
+}
+.rui-input-li{
+  border: 1px solid #E5E5E5;
+  border-radius: 1.333vw;
+  position: relative;
+  margin-bottom: 6.1333vw;
+  padding-left: 24vw;
+}
+.rui-input{
+  width: 100%;
+  height: 12vw;
+  line-height: 12vw;
+  color: #777;
+  font-size: 3.73vw;
+}
+.rui-input-name{
+  height: 12vw;
+  line-height: 12vw;
+  color: #333;
+  padding-left: 2vw;
+  font-size: 3.73vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rui-btn{
+  background-color: #3CA6FF;
+  color: #fff;
+  border-color: #3CA6FF;
+  padding: 0;
+}

@@ -1,0 +1,30 @@
+/* pages/pay/pay.wxss */
+.rui-content{
+  padding: 4vw;
+}
+.rui-form-box{
+  background-color: #fff;
+  padding: 0 10.3vw 1vw 4vw;
+  border-radius: 1.2vw;
+  margin-bottom: 4vw;
+}
+.rui-colorblue{
+  color: #458EED;
+}
+.rui-colorgray{
+  color: #767676;
+}
+.rui-form-head{
+  font-size: 4.3vw;
+  color: #458EED;
+  height: 15.5vw;
+  line-height: 15.5vw;
+}
+.rui-form-li{
+  font-size: 3.7333vw;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  margin-bottom: 4vw;
+  position: relative;
+}

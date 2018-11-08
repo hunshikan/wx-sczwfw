@@ -1,0 +1,70 @@
+<!--pages/pay/pay.wxml-->
+<view class='rui-all-msg' wx:if="{{balanceData == null }}">
+  {{balanceData0}}
+</view>
+<view class='rui-content' wx:if="{{balanceData != null }}">
+  <view class='rui-form-box'>
+    <view class='rui-form-head'>人员信息</view>
+    <view class='rui-form-li'>
+      <text class='rui-colorgray'>姓名:</text>
+      <text class='rui-colorblue'>{{balanceData.aac003}}</text>
+    </view>
+    <view class='rui-form-li'>
+      <text class='rui-colorgray'>身份证号：</text>
+      <text class='rui-colorblue'>{{balanceData.idCard}}</text>
+    </view>
+    <view class='rui-form-li'>
+      <text class='rui-colorgray'>性别：</text>
+      <text class='rui-colorblue'>{{balanceData.aac004}}</text>
+    </view>
+    <view class='rui-form-li'>
+      <text class='rui-colorgray'>人员状态：</text>
+      <text class='rui-colorblue'>{{balanceData.aac008}}</text>
+    </view>
+    <view class='rui-form-li'>
+      <text class='rui-colorgray'>个人编号：</text>
+      <text class='rui-colorblue'>{{balanceData.aac001}}</text>
+    </view>
+  </view>
+  <!-- 缴费信息 -->
+  <view class='rui-form-box'>
+    <view class='rui-form-head'>缴费信息</view>
+    <view wx:for="{{payData}}" wx:key="payData">
+      <view class='rui-form-li' data-id="{{item.aae002}}" bindtap='changeStatus'>
+        <text class='rui-colorblue'>缴费期号:</text>
+        <text class='rui-colorblue'>{{item.aae002}}</text>
+        <image class='rui-pay-more {{item.status == "open" ? "rui-active" : ""}}' src='{{staticPicture.moreIcon}}'></image>
+      </view>
+      <view style='display:{{item.status == "close" ? "none" : ""}}'>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>单位名称：</text>
+          <text class='rui-colorgray'>{{item.aab004}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>缴费基数：</text>
+          <text class='rui-colorgray'>{{item.aic020}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>单位实缴金额：</text>
+          <text class='rui-colorgray'>{{item.aic024}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>个人实缴金额：</text>
+          <text class='rui-colorgray'>{{item.grjfje}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>实收时间：</text>
+          <text class='rui-colorgray'>{{item.dwjfrq}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>缴费类型：</text>
+          <text class='rui-colorgray'>{{item.aae143}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>划入账户金额：</text>
+          <text class='rui-colorgray'>{{item.yic486}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

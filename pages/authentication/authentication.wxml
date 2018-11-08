@@ -1,12 +1,16 @@
 <!--pages/authentication/authentication.wxml-->
-<form bindsubmit="formSubmit" bindreset="formReset">
-  <view class="rui-input">
-    <input name="idCard" placeholder='请填写的身份证号'></input>
-  </view>
-  <view class="rui-input">
-    <input name="realName" placeholder='请填写您的真实姓名'></input>
-  </view>
-  <view class="rui-btn-box">
-    <button formType="submit">提交</button>
-  </view>
-</form>
+<view class='rui-content'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="rui-input-li">
+      <view class='rui-input-name'>真实姓名：</view>
+      <input class="rui-input" name="realName" placeholder='请输入您的真实姓名'></input>
+    </view>
+    <view class="rui-input-li">
+      <view class='rui-input-name'>身份证号码：</view>
+      <input class="rui-input" name="idCard" placeholder='请输入您的身份证号'></input>
+    </view>
+    <view class="rui-btn-box">
+      <button class="rui-input rui-btn" formType="submit">提交</button>
+    </view>
+  </form>
+</view>

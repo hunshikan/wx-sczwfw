@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<view class='rui-content'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="rui-input-li">
+      <view class='rui-input-name'>账号：</view>
+      <input class="rui-input" name="phoneNumber" placeholder='请输入四川政务服务网账号'></input>
+    </view>
+    <view class="rui-input-li">
+      <view class='rui-input-name'>密码：</view>
+      <input class="rui-input" name="pwd" password="true" placeholder='请输入登陆密码'></input>
+    </view>
+    <view class="rui-btn-box">
+      <button class="rui-input rui-btn" formType="submit">登录</button>
+    </view>
+    <view class="rui-btn-box" style='margin-top:6.1333vw;'>
+      <!-- <button class="rui-input rui-btn rui-btn-green" open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber'>使用微信一键登录</button> -->
+    </view>
+  </form>
+</view>

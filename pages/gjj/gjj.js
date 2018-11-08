@@ -12,8 +12,9 @@ Page({
     this.setData({ pageService: pageService[opts.type]})
   },
   jumpMethod(e){
-    staticMethod._jumpMethod({
-      url: e.currentTarget.dataset.url
-    })
+    staticMethod._jumpWebview(e, this);
+    // staticMethod._jumpMethod({
+    //   url: e.currentTarget.dataset.url
+    // })
   }
 })

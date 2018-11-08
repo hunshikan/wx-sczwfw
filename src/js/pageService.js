@@ -46,7 +46,7 @@ const hysyIcon2 = '';
 // 户籍办理
 const hjblBanner = '';
 const hjblIcon1 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAA2CAYAAABgMA/LAAAL3UlEQVRoQ+VbeVxV1Rb+9jn3XiYZBBkEeaGiMji8eggOUTkUKlZaieaQ9bQ0zV7P0rIJ1Bwyh+ZySNNePsV+r8GBnAlzSklQxtQAUUQRZYbLvffs91sH7+FevSBXru/3wPUPcM7aw/rO2muv9e0NQyMyKp6LGRkZrpKKOTNRo+Z6xhrTb7nvtFBD0EuCrorrhGvpcaG1N9rSoOFBcTkBolA7BuAPAOgGcDeAiS0XjEZnzgFUAMjjHIcgsu8yUlOTsSXGYGxlEajQBZlRMAifAdwfgKaVgmPRLMaYgXNclDiPy4wN+soyUHFxQqg45hFwvg5gPncTQJZs5QKb4eBZvjJ5SpjOzKNCl+T4sOqa7zljfW5oWMwYO825pG2d4DEBgC+AjgDod6NcZoxPSHsneJcZUCFzM2cIgrCCcy7HInJDScLXkiQtEZlUptFolDXbmgAzaBnTqWsdmIENYQzLAeZ43T4O8H9rJdWL9UBxzrrPz07lQA9FibFNaoNmWkpcx5LWBExjtoTMy4phkEPPdbB4ITcYIhWgghae9xD1lZcBbnS9csaFp9Niu26/W0AiO3vGnvEyiPoNAKIUuxmG1gMVm9lVFFm2CShFgiT0ORXX9c+7CajQuHQNE8SPODDVaLfEMI0dyoe7qLYbdyo30mvFrk/fNr60U9WUzxo26YNOPmmtY9lxqVRkyBZEXX5pGi4PGAC9JQegJDszK3s5B142vudgM1hygSbYwHhGYWkA5sRvVdq6OFxF3MgYtHW69H/tUGXV7sgvDkJxZXtUadtAYBKc7Evh7XIOAe0yoBLNkuxazpEhMraVC8LXvb1rblotrQ4oncEOO09NwJEz0SitbodavT30khoMHCpBB3t1FVwdr2Boz7UI67jHHDAGAziOMQnTevvpTph6QqsBSpJE5BUHYW3Sezh/NfCW3i4IBvTpnIBR4cvh5lhkps+ARBG6mPvaQ3nRKoCSuICT5x7AxsOvo6i8wy1BMlXo7JWKZ+6fj794mO5XAOdYEeGrm2nUtQlQ6Rf6IinrCRi4yqpJWqOsFrQYGLIZXXzMVoTcxZVyXyzdsRqXyv5i1qUg6NHNJxk+rnmo0Tnhj8L7UFzR/qZhQ/0OY/JDb8PN8bLpuxq9KPTo56U9Qw+bDdS54m74fO8yXCq9xxq7b0vX3akQs6Kfh49rrtKeltyne5bjRN5A5ZmdqhphnXZjVPgKuDpcUZ7X6h1wIHsEtqa8gNKqdspzUdBjdMRSDA7dCMaIMLguEv4R7qf72CZAkTet2r8IZdUet2W8NY2c7a/hxUGzEOx7VGmWdTEcS7atAUdd6kcBe/hfVyOq5wbYqystdn/2ci+sS5qLC9c6K+/93bPx1mMTYKeuVp4xhpW9fXRy3tRsjyqvcceaxPdwMj/SGptvS7enfxKmDHwDjppypf2axIU4ePpR5e+uPsmYOXQa7FRVjY5x9OxQrDsQB62uriJhTMLs6MkIan/MtN3m8Pa6MTYBijrRSyrkFnVHrd7utgBoSiPa1jt6pssGGaW6tg0Wb1uHc8VByrPZ0ZMQ7PvbLbu8WumNL/d+gNOX7lV0h/RcLy9Bo3BgS0R7XYzNgLrlrO6QQlGZP5b//DkoKSYhMD99ph9E4dZkBsW2VYmLQJ5lFPLYfw6Z3vqAKiwJwIe7PsOl0rrdztWxGB+Oe6jJn2Vt0jwcyB6p6JMnkke2Oo+6VumNpQkrUXA9KIvMgI+fiTSLYQ2hRhn7l/veN9stIzonYOrA2a0PKCpNlid8gcyCCMU4SgmG9Vp7S6+iuPbF3g+UZUsNKPEcEBzf+oAiixJOPov4o68qxlE58urQKejgfrpRsDYffQ27To2HVEfayvFt0ajhcHOqL2dsGsypCN2fEYPdaePl3c/W4qCpxODQbxHZ7XuozSt+eagKrRveiv8RZTXuytAhfkcxtu9i+Lr9abZLUq5VpXXGwdMjsOnIq+DXuUhKMvt1+QnPRs6V87A7EqOoLFi5731crbxzhzNt7EvwzuNj4eWSb/E7HD4TjfW/vqvkRKREHtW7004EtEsHUUP0QSmWpZx7ECl55gG/nfMFvDBgDrp4m5dHNvWorILeWLn/fZRUedramZT+KMOOGzka3q55FscgEL4//hJ2pY2HwcSrBWaAg6ZC9kQqnKneoyB+ozz3QCz6d/kJVMqYik2BoiTzh+TpOJ7ziFJG2BIxMrZP4A5E91oDjarGYte0pK6U+eHzfUuRWxRq1fAPBW/B6IhlFssdmwJFs+Kc4VqVF6Q7wB6ITCfnRwRYQ0L1ZkLqc8i+GCaTdNaIKOjQN3A7onpsQAd3Igrqi2KbA2XNxGypS560PzMGPxyfjvKatha7Ji90dSwCl1QoqfaA3nDzTQD6CO3dcjB98Ez55x0J5rY03Jq+aFs/fGY4Nh6ajapaF6UpxRmKZX8L2IvwzgnwdctRvJHi09miHjhy+lGcOt8fpdUeoFLGKA6acrwxfBL8PbJk6rhVeNTZS73kTaSo3E8xlA48BoVsQp/A7fBoc7FR3IlHS8yMQVL2E2YbQKB3CiY9+LZM9rV4oPQGNeb/uNGMNfByOY+J989FkO+xRuOZKXpEsfz2ZxQ2/PqukgMSlz6kx3o8EfYJBEFvW/agSusiJ3wU1G9X6DiJiDlHO+KaTFhGCx3SKcumI/U1GfFTEyPnIrzTztsanjaC/yS/pMQvJ7syxI4Yg3Yu+bYDiijV7469guM5g2GwcscxtYrO2Xr5J2Fi5LwGmUnSp/O6ZQkrzbyJeKSnen94Ux7UVNSInV2bNBep5+huXN3HpmpgbL/FtgOKguLqxIUor64vIZo6wRv1iEeKHTkaRMs2JCfyBuCrX+ajUusqqxCPvmDUiEbBbcp8juc8LMc8WtYklOQueTr6u0EBhaPo72ZTwblFITIBdrGkU1Pm06gOFbTk8m5OZqchJts1w/aUyXIWTpk2yfB7V+PJMJn/b5ZQ4jwnfjuI+TTKxMh5W2cP2PiYTYCikoHO1NIu9EXd9SljfCEXpt9NfzZkC5eXTYjfEfT0P9DgEqLt/dvDbyAp60m5I2ozc+hUhJgcNjQHrfUH3kViluxAsoR3+nnnuvGvDLEJUMZOKZEznoTczmQpbxFFnZy/NCRVtc5Y+8t8JOcOklVcHYrl4yu/to1TKk2dD30AOnAwSkC7zD3bp4182KZANXUyzdGjuLRq/0KczKegC3i5nJM5btNzvub0n3a+P5YlfKl04eOWt2/vy1HyV2l2jGrOxKxtS167LWUydqROkpNEolEm9F8AJ7tSa7uyqF9R0xaLtq2T6RgqfYb1+mr7guhPhrc4oGjCdERFHBhRJpRcujgUN7pcrUWwsPQe5BR1h7dLPvw9srf071DR8o+rrAXBWv1mlTCUPb8zYiw8nc9bO26L0zcFytLVRA5ef+OuosYNM745oBhJjOG0Qa+he4eDLc5waydsClTgnN897R2cvubgw4z9cIijjVcT0ykRenPLj0pCSUR838BtGNd3MRztyqwdu0XpK0DFcaE7++NxzjjdCm5TZwSvhCSFsxOX7broDFIyAOc96eOw8dDrSp5E12oiOu9A/65b4e2aa/F0pEUh0sBka3UOP722efdbeoP4CAOnS2X1nA6QAMlpPDuU7+CnVul3cKBnSZUXPt71kbwbGIUuSzjbl8g1kenFidYAkNGGWr1jxbVKzxIweILD9AZKGSDNSJfi/8WOF8BRgnoFGJ6nSzG/5w7ENwffBIF2l0stOF+vbauaceblLlqZazhaoIpijH0DwJOoV6rct6U8j7yi4GaVKy0VaM5RAIGvUtm3XXpylo98S00GKp1DU1WoeY+Dz5LDFxjoYkRyzmAkZj6FgpL6G2st1fgmzvsaYzweerbGzrdbavIUphwnK1RlHIcw7JJ6JTieBuBk2jGRaLQUTQ8dmzhwi1Cr1LrsXrFn9dRTv6fkmf7Xp+nkzThdOV4x9UQAfwcQ1iKstMEkTfOohrq7ifzevx8q5+6OnpLO0IsJUpQk8WAwWHfaaIPJ/y+7YAISw7318xsb879NWkCjbq1h4QAAAABJRU5ErkJggg==';
-const hjblIcon2 = '';
+const hjblIcon2 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAlCAYAAADMdYB5AAAE80lEQVRYR+2Ya2wUVRTH/+d2uwuUR+WVQGKgFcrsLi0SRfjGQwM2hpCmRUTiA5BQEaoxMahhd2cHX4RHghgsDW0RY0RLC2JIeAnaBKMIEQgznZaCBfGFCGhrpLszc8xdWFToulu6NSHxftiZ7D1zzu+ee885917CteYNGROEoHkgygWQEf8/3U8GbDCaLbIqm4Kjv5L6Sf6MDpvPOoQ1BIh0G02kjwFHMBafCClvk187MQbIPAKwHP0vAH8GiEh3wTA7HiKaDCAbgEUkCsinmWsJKAPoPBz3GF3N+bG7AK5P/SvGMOGIoxKEwavIr5m7AEwD0Tt6YNST3Q0Q1+/TGuoIVARgh4Q4AGASA+VGUHn6v4Lwa43vA/wIgF3/Q3TKE96wOV8QHgVwuv2PjJebXx/5c6JpG/HSyUGenvZrAHIB/kAPeis6ku3UdPjC5gwibAf4EoOywdhvhJQHEkH4wuY+EKYQcBnAHWBRoofyam+U7yzEehAttNs425VF65j4ccP5wQ11snUTiHrA5RNDIsS0uZ1FmVvYl0EoNwLKoq5BLG9aQuy8CWA3wPcx6IIRVPISekIzmwg8EKBDMvSZRJkRyFvXJQi/qrtZiGoCPQzgDEPMMYJ5XyaGaBpPcN4DMIzBH5LjzNVV/00ZuFPTcd2YygIqOSnnkSTytwaRsvXUBG8fiBHqyb5uYdWCRe/UxnZVisj5SA9635DvPs2sBJMP5LRFHFdxszryt7iulDwxXP0mO0u07wHQpzMQYNTqIWWZ/MavmVvlA0Dr745naouaI3NHrKUE0SnDtyB8+0DkLj3cr0dWn1owspIP1NlkhLwbksv9JeELm1VEmAtQXcJSHlsT1L4TgnolU86gqo6yImQa5zuHW2S7InC3tKg5V+K68tTjuS7KXBQVVmW37CfuCh0b7HF5VDDmENBXGmagHUzbWdiBhoDv5N8HlnaIfK0h3wZ2E2gIM9cP7X/K9IgInbmoDGEWhQBfAVGJHlDktvJqWKdze5e79FS/nlnR4wxkP3T3xoqZ49ZOA5B/zdbZL5oLazbsXzETRAMccsbGPZJWCL9mLgewbGr+5tWzJ6wsA5B543o6enbSmrW71y0G42M9pJSk3RM+zTwN8PlNCwrkIWpcxwuaLyysPrQ3YvUssTw0oHGp0po2T8g07xH2rwN6f1e+avaDC+Onu45AquvV8vrG4lKGmCC3BWmDkBHRI8Pz07CBRrlaNKv038J666Hnyncem1/qCDGxYVlefdogoLLwC7NVCGtb5byxhSDqnwCEg7U1b317UVliO5xjqt6W9EFcrZrbAExZOavw3UF9zz3TEYRlu+oWVH0tixr0oKKkfWHK6wXKEAczRXTf+ifGt2a6osX/AGEcfH7LJ6cvtQ1+DIxX49VWemIfgPsBbNSDyoJkKTpZv18zZRlfDsbhwoKqvdPvqXC7RJQ+NYujWz5/scBBLGFZgCCAV8OxA+TXGqsBlgfhhh7n2sYcqbg3msxQsn6fZpaCsYIonrLJIbAM2wiDVolIpIrdmZUAJjKjhvzhhukg2nFN8UFm3kZEdjJDHfXLiw/LiexpUgtMWQB7UXsREQqYKQPkNNk21TWGle9j36qq8IlZi8B0KXZT49fMGgCx7NXlxmTooVGxhZdqi0HESm7G0BfI4aeYMLwr10bMXG2EvPNSBZByfwIvobgmjnId/QAAAABJRU5ErkJggg==';
 
 // 生活缴费
 const shjfBanner = '';
@@ -59,147 +59,252 @@ const qzzpIcon1 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABECAYAAAA
 // 更多图标
 const moreIcon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAXCAIAAABbMYLrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzgzNEQ3QkNEQzEwMTFFODkzNkFCNDBBN0NDQ0Y5Q0UiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzgzNEQ3QkREQzEwMTFFODkzNkFCNDBBN0NDQ0Y5Q0UiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3ODM0RDdCQURDMTAxMUU4OTM2QUI0MEE3Q0NDRjlDRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3ODM0RDdCQkRDMTAxMUU4OTM2QUI0MEE3Q0NDRjlDRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqGGQnEAAAEASURBVHjarJO7DkRQEIZ3Nx7CeyhcCo1E0FCp6LyCN/BAGpVKqxMRhU4hiEuhldh/I9lsszt7En9yGvk+OTNn5nYcR5IkQRBs23ZQuXVdJ0mSIAi+7y/LQtA4WZbJsgzBdd15ngkayfNcURQItm0Pw0DQSFEUqqpCsCyrbVuCRqqq0jQNgmmaTdMQNAJI13UI0Oq6JmgE18C/IeBiZVkSNIJCUS4ElI4GEDQyjiMaegpoMUEjeCzP8yCIopimKb7cX8b39H3vOM6+7xzHxXH8+IGu6xqG4YlGUcTz/BX3ZugJQ78Z3vI9J4ZhEHPCMIMM8/25O9M0XbqX/+/8U4ABAKXOLF9bCKhjAAAAAElFTkSuQmCC';
 
+const staticPath = require('../../utils/staticPath.js');
+
 const pageService = {
   shbx: {
     moreIcon: moreIcon,
-    bannerUrl: '../../src/images/banner.png',
+    bannerUrl: '../../src/images/banner/shbx_banner.png',
     list: [
       {
         iconPath: shbxIcon1,
+        width: 5.866667,
+        height: 4.8,
         title: '社保卡状态查询',
-        jumpPath: '../../pages/menu/menu'
-      },
-      {
-        iconPath: shbxIcon1,
-        title: '企业养老保险',
-        jumpPath: ''
+        jumpPath: staticPath.socialCheck,
+        status: 1,
+        type: 'webview'
       },
       {
         iconPath: shbxIcon3,
+        width: 6,
+        height: 4.4,
         title: '异地就医结算',
-        jumpPath: ''
+        jumpPath: staticPath.placesCheck,
+        status: 2,
+        type: 'webview'
       },
       {
+        iconPath: shbxIcon2,
+        width: 5.06667,
+        height: 4.4,
+        title: '企业养老保险',
+        jumpPath: staticPath.enterpriseCheck,
+        status: 1,
+        type: 'webview'
+      },
+      // {
+      //   iconPath: shbxIcon3,
+      //   width: 6,
+      //   height: 4.4,
+      //   title: '异地就医结算',
+      //   jumpPath: staticPath.placesCheck,
+      //   status: 2,
+      //   type: 'webview'
+      // },
+      
+      {
         iconPath: shbxIcon4,
-        title: '工伤保险个人参保',
-        jumpPath: ''
+        width: 3.6,
+        height: 4.66667,
+        title: '工伤保险个人参保查询',
+        jumpPath: staticPath.lnjuryCheck,
+        status: 1,
+        type: 'webview'
+      }
+    ]
+  },
+  ylbx: {
+    moreIcon: moreIcon,
+    bannerUrl: '../../src/images/banner/gjj_banner.png',
+    list: [
+      {
+        iconPath: shbxIcon1,
+        width: 5.866667,
+        height: 4.8,
+        title: '医保余额查询',
+        jumpPath: '../../pages/balance/balance',
+        status: 1,
+        type: 'view'
+      },
+      {
+        iconPath: shbxIcon3,
+        width: 6,
+        height: 4.4,
+        title: '医保缴费明细查询',
+        jumpPath: '../../pages/pay/pay',
+        status: 1,
+        type: 'view'
+      },
+      {
+        iconPath: shbxIcon2,
+        width: 5.06667,
+        height: 4.4,
+        title: '医保消费明细查询',
+        jumpPath: '../../pages/consumption/consumption',
+        status: 1,
+        type: 'view'
       }
     ]
   },
   gjj: {
     moreIcon: moreIcon,
-    bannerUrl: '../../src/images/banner.png',
+    bannerUrl: '../../src/images/banner/gjj_banner.png',
     list: [
       {
         iconPath: gjjIcon1,
+        width: 5.066667,
+        height: 4.53333,
         title: '公积金',
-        jumpPath: ''
+        jumpPath: staticPath.accumulationCheck,
+        status: 1,
+        type: 'webview'
       }
     ]
   },
-  ylws: {
-    moreIcon: moreIcon,
-    bannerUrl: '../../src/images/banner.png',
-    list: [
-      {
-        iconPath: ylwsIcon1,
-        title: '挂号就医',
-        jumpPath: ''
-      },
-      {
-        iconPath: ylwsIcon2,
-        title: '药品验真',
-        jumpPath: ''
-      },
-      {
-        iconPath: ylwsIcon3,
-        title: '疫苗快查',
-        jumpPath: ''
-      },
-      {
-        iconPath: ylwsIcon4,
-        title: '更多医疗服务',
-        jumpPath: ''
-      }
-    ]
-  },
+  // ylws: {
+  //   moreIcon: moreIcon,
+  //   bannerUrl: '../../src/images/banner/ylws_banner.png',
+  //   list: [
+  //     {
+  //       iconPath: ylwsIcon1,
+  //       title: '挂号就医',
+  //       jumpPath: ''
+  //     },
+  //     {
+  //       iconPath: ylwsIcon2,
+  //       title: '药品验真',
+  //       jumpPath: ''
+  //     },
+  //     {
+  //       iconPath: ylwsIcon3,
+  //       title: '疫苗快查',
+  //       jumpPath: ''
+  //     },
+  //     {
+  //       iconPath: ylwsIcon4,
+  //       title: '更多医疗服务',
+  //       jumpPath: ''
+  //     }
+  //   ]
+  // },
   jtcx: {
     moreIcon: moreIcon,
-    bannerUrl: '../../src/images/banner.png',
+    bannerUrl: '../../src/images/banner/jtcx_banner.png',
     list: [
       {
         iconPath: jtcxIcon1,
+        width: 4.4,
+        height: 3.6,
         title: '车辆违章',
-        jumpPath: ''
+        jumpPath: staticPath.carPeccancy,
+        status: 2,
+        type: 'webview'
       },
       {
         iconPath: jtcxIcon2,
+        width: 4,
+        height: 4,
         title: '车辆年检',
-        jumpPath: ''
+        jumpPath: staticPath.carYearly,
+        status: 2,
+        type: 'webview'
       }
     ]
   },
   zfjs: {
     moreIcon: moreIcon,
-    bannerUrl: '../../src/images/banner.png',
+    bannerUrl: '../../src/images/banner/zfjs_banner.png',
     list: [
       {
         iconPath: zfjsIcon1,
+        width: 4.266667,
+        height: 5.2,
         title: '建筑工程企业资质',
-        jumpPath: ''
+        jumpPath: staticPath.enterqualiCheck,
+        status: 2,
+        type: 'webview'
       },
       {
         iconPath: zfjsIcon2,
+        width: 4.13333,
+        height: 5.06667,
         title: '住建工程项目信息',
-        jumpPath: ''
-      },
-      {
-        iconPath: zfjsIcon3,
-        title: '住建工程诚信',
-        jumpPath: ''
+        jumpPath: staticPath.projInformatCheck,
+        status: 2,
+        type: 'webview'
       },
       {
         iconPath: zfjsIcon4,
+        width: 5.2,
+        height: 4,
         title: '住建人员资质',
-        jumpPath: ''
+        jumpPath: staticPath.personQualiCheck,
+        status: 2,
+        type: 'webview'
+      },
+      {
+        iconPath: zfjsIcon3,
+        width: 4.4,
+        height: 4.4,
+        title: '住建工程诚信',
+        jumpPath: staticPath.enginehonerstyCheck,
+        status: 2,
+        type: 'webview'
       }
     ]
   },
   hjbl: {
     moreIcon: moreIcon,
-    bannerUrl: '../../src/images/banner.png',
+    bannerUrl: '../../src/images/banner/hjbl_banner.png',
     list: [
       {
         iconPath: hjblIcon1,
+        width: 5.2,
+        height: 4,
         title: '身份证办理进度',
-        jumpPath: ''
+        jumpPath: staticPath.cardIDCheck,
+        status: 2,
+        type: 'webview'
       },
       {
         iconPath: hjblIcon2,
+        width: 4.4,
+        height: 4.93333,
         title: '新生儿重名',
-        jumpPath: ''
+        jumpPath: staticPath.renameCheck,
+        status: 2,
+        type: 'webview'
       }
     ]
   },
   shjf: {
     moreIcon: moreIcon,
-    bannerUrl: '../../src/images/banner.png',
+    bannerUrl: '../../src/images/banner/shjf_banner.png',
     list: [
       {
         iconPath: shjfIcon1,
+        width: 4.66667,
+        height: 4.26667,
         title: '水电燃气缴费',
-        jumpPath: ''
+        jumpPath: staticPath.lifeCharge,
+        status: 2,
+        type: 'webview'
       }
     ]
   },
   qzzp: {
     moreIcon: moreIcon,
-    bannerUrl: '../../src/images/banner.png',
+    bannerUrl: '../../src/images/banner/qzzp_banner.png',
     list: [
       {
         iconPath: qzzpIcon1,
+        width: 4.93333,
+        height: 4.533333,
         title: '求职招聘信息',
-        jumpPath: ''
+        jumpPath: staticPath.jobhuntingCheck,
+        status: 2,
+        type: 'webview'
       }
     ]
   }

@@ -1,0 +1,5 @@
+/* pages/login/login.wxss */
+@import '../authentication/authentication.wxss';
+.rui-input-li{
+  padding-left: 15vw;
+}

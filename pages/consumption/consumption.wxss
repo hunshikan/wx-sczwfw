@@ -1,0 +1,2 @@
+/* pages/consumption/consumption.wxss */
+@import '../pay/pay.wxss';

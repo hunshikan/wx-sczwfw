@@ -1,0 +1,46 @@
+<!--pages/pay/pay.wxml-->
+<view class='rui-all-msg' wx:if="{{balanceData == null }}">
+  {{balanceData0}}
+</view>
+<view wx:if="{{balanceData != null }}">
+  <view class='rui-pr' style='margin-bottom:6vw;'>
+    <image src='../../src/images/yue/yue_bg.png' class='rui-yue-img'></image>
+    <view class='rui-balance-content'>
+      <view class='rui-balance-li'><image class='rui-balance-img' src='{{staticPicture.balanceIcon}}'></image> 医疗账户余额</view>
+      <view class='rui-colorblue rui-balance-li' style='font-size:8vw;margin-top:3vw;'>￥{{balanceData.akc102}}</view>
+    </view>
+  </view>
+  <view class='rui-content'>
+    <view class='rui-form-box'>
+      <view class='rui-form-head'>人员基本信息</view>
+      <view class='rui-form-li'>
+        <text class='rui-colorgray'>姓名:</text>
+        <text class='rui-colorblue'>{{balanceData.aac003}}</text>
+      </view>
+      <view class='rui-form-li'>
+        <text class='rui-colorgray'>身份证号：</text>
+        <text class='rui-colorblue'>{{balanceData.idCard}}</text>
+      </view>
+      <view class='rui-form-li'>
+        <text class='rui-colorgray'>性别：</text>
+        <text class='rui-colorblue'>{{balanceData.aac004}}</text>
+      </view>
+      <view class='rui-form-li'>
+        <text class='rui-colorgray'>人员状态：</text>
+        <text class='rui-colorblue'>{{balanceData.aac008}}</text>
+      </view>
+      <view class='rui-form-li'>
+        <text class='rui-colorgray'>个人编号：</text>
+        <text class='rui-colorblue'>{{balanceData.aac001}}</text>
+      </view>
+      <view class='rui-form-li'>
+        <text class='rui-colorgray'>缴费基数：</text>
+        <text class='rui-colorblue'>{{balanceData.akc010}}</text>
+      </view>
+      <view class='rui-form-li'>
+        <text class='rui-colorgray'>单位名称：</text>
+        <text class='rui-colorblue'>{{balanceData.aab004}}</text>
+      </view>
+    </view>
+  </view>
+</view>

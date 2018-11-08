@@ -1,0 +1,74 @@
+<!--pages/pay/pay.wxml-->
+<view class='rui-all-msg' wx:if="{{balanceData == null }}">
+  {{balanceData0}}
+</view>
+<view class='rui-content' wx:if="{{balanceData != null }}">
+  <view class='rui-form-box'>
+    <view class='rui-form-head'>人员信息</view>
+    <view class='rui-form-li'>
+      <text class='rui-colorgray'>姓名:</text>
+      <text class='rui-colorblue'>{{balanceData.aac003}}</text>
+    </view>
+    <view class='rui-form-li'>
+      <text class='rui-colorgray'>身份证号：</text>
+      <text class='rui-colorblue'>{{balanceData.idCard}}</text>
+    </view>
+    <view class='rui-form-li'>
+      <text class='rui-colorgray'>性别：</text>
+      <text class='rui-colorblue'>{{balanceData.aac004}}</text>
+    </view>
+    <view class='rui-form-li'>
+      <text class='rui-colorgray'>人员状态：</text>
+      <text class='rui-colorblue'>{{balanceData.aac008}}</text>
+    </view>
+    <view class='rui-form-li'>
+      <text class='rui-colorgray'>个人编号：</text>
+      <text class='rui-colorblue'>{{balanceData.aac001}}</text>
+    </view>
+  </view>
+  <!-- 缴费信息 -->
+  <view class='rui-form-box'>
+    <view class='rui-form-head'>消费信息</view>
+    <view wx:for="{{consumptionData}}" wx:key="consumptionData">
+      <view class='rui-form-li' data-id="{{item.aae036}}" bindtap='changeStatus'>
+        <text class='rui-colorblue'>结算时间:</text>
+        <text class='rui-colorblue'>{{item.aae036}}</text>
+        <image class='rui-pay-more {{item.status == "open" ? "rui-active" : ""}}' src='{{staticPicture.moreIcon}}'></image>
+      </view>
+      <view style='display:{{item.status == "close" ? "none" : ""}};'>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>就诊类别：</text>
+          <text class='rui-colorblue'>{{item.aka130}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>医疗机构名称：</text>
+          <text class='rui-colorblue'>{{item.akb021}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>费用总额：</text>
+          <text class='rui-colorgray'>{{item.yka055}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>个人帐户：</text>
+          <text class='rui-colorgray'>{{item.akc102}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>个人现金支付：</text>
+          <text class='rui-colorgray'>{{item.ykc300}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>统筹支出：</text>
+          <text class='rui-colorgray'>{{item.ykc301}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>补充医疗基金支付：</text>
+          <text class='rui-colorgray'>{{item.ykc303 ? item.ykc303 : '0'}}</text>
+        </view>
+        <view class='rui-form-li'>
+          <text class='rui-colorgray'>公务员补助基金</text>
+          <text class='rui-colorgray'>{{item.ykc302}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

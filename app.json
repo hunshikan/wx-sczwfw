@@ -2,6 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/authentication/authentication",
+    "pages/consumption/consumption",
+    "pages/pay/pay",
+    "pages/balance/balance",
+    "pages/login/login",
     "pages/menu/menu",
     "pages/consult/consult",
     "pages/mine/mine",
@@ -15,7 +19,8 @@
     "pages/hjbl/hjbl",
     "pages/shjf/shjf",
     "pages/qzzp/qzzp",
-    "pages/city/city"
+    "pages/city/city",
+    "pages/ylbx/ylbx"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,31 @@
+/* pages/balance/balance.wxss */
+@import '../pay/pay.wxss';
+.rui-yue-img{
+  width: 100vw;
+  height: 30vw;
+  display: block;
+}
+.rui-balance-content{
+  width: 95vw;
+  height: 32vw;
+  font-size: 4vw;
+  color: #767676;
+  box-sizing: border-box;
+  position: absolute;
+  top: 4vw;
+  left: 2.5vw;
+  background-color: #fff;
+  border-radius: 1vw;
+  text-align: center;
+  padding-top: 7.6vw;
+}
+.rui-balance-img{
+  width: 6.3vw;
+  height: 5.2vw;
+  margin-right: 2vw;
+}
+.rui-balance-li{
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+}

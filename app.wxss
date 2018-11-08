@@ -84,7 +84,10 @@
   padding: 1.6vw 2vw;
   border-radius: 1.3333vw;
 }
-
+.rui-btn-green{
+  background-color: #7BD07D!important;
+  border-color: #7BD07D!important;
+}
 
 page{background-color: #eee;}
 .rui-page-banner{
@@ -113,8 +116,13 @@ page{background-color: #eee;}
 .rui-page-icon{
   width: 7.6vw;
   height: 7.6vw;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 3.6vw;
+  top: 50%;
+  transform: translateY(-50%);
   left: 4vw;
 }
 .rui-page-more-icon{
@@ -123,4 +131,25 @@ page{background-color: #eee;}
   position: absolute;
   top: 6vw;
   right: 4.3vw;
+}
+.rui-pay-more{
+  width: 2vw;
+  height: 3.066667vw;
+  position: absolute;
+  right: -6vw;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+.rui-pay-more.rui-active{
+  transform: translateY(-50%) rotate(-90deg);
+}
+.rui-all-msg{
+  font-size: 4vw;
+  line-height: 6vw;
+  color: #777;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }

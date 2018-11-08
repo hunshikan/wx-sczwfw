@@ -41,10 +41,13 @@
 *
 *
 */
-const lifeCharge = 'http://fspd.xiongmaody.com.cn/yzfSc/api/access/merchant';
-const path = 'http://www.sczwfw.gov.cn/app/';
+const lifeCharge = 'https://fspd.xiongmaody.com.cn/yzfSc/api/access/merchant';
+const path = 'https://www.sczwfw.gov.cn/app/';
 // const basePath = 'http://10.206.19.84:6008/wxSmallOpenAPI/';
-const basePath = 'http://218.6.169.98:12081/move/moveApi/wxSmallOpenAPI/';
+// const basePath = 'http://218.6.169.98:12081/mobile/web/wxSmallOpenAPI/';
+const basePath = 'https://www.sczwfw.gov.cn/mobile/web/wxSmallOpenAPI/';
+const balancePath = 'https://202.61.88.58:8080/dcm/api/prof/';
+const loginPath = 'https://www.sczwfw.gov.cn/mobile/regApi/portalOpenAPI/accountHandlerKey?safeToken=';
 
 const pathOpts = {
   // 百度的AK
@@ -59,8 +62,22 @@ const pathOpts = {
   _loginPath: basePath + 'wxSmallRoutineLoginHandler',
   // 身份认证接口
   _authenticationPath: basePath + 'wxIdCardAuthenticationHandler',
+  // 政务网登录
+  loginPath: loginPath,
   // 生活缴费
   lifeCharge: lifeCharge,
+  // 个人医保余额查询
+  balanceCheck: balancePath + 'fb7122a7-0a2d-43f3-a357-fc7847fa0f8a/service',
+  // 个人医保缴费查询
+  payCheck: balancePath + '31ce5c7b-9b85-4256-bfb2-9d5042ffcba8/service',
+  // 个人医保消费查询
+  consumptionCheck: balancePath + 'c27e9494-8382-4630-8bfb-8e04b3de6059/service',
+  // 12345在线
+  living12345: 'https://zmhd.sczwfw.gov.cn/app/index',
+  // 车辆违章
+  carPeccancy: 'https://st.xmxing.net/index.php',
+  // 车辆年检
+  carYearly: 'https://gab.122.gov.cn/views/inquiryjyqz.html',
   // 办件查询
   officeCheck: path + 'weixinApply/queryApplyForWeixin',
   // 物流查询
@@ -89,7 +106,7 @@ const pathOpts = {
   projInformatCheck: path + 'egov/weixin/index/dist/index.html#/projInformat',
   // 住建工程诚信
   enginehonerstyCheck: path + 'egov/weixin/index/dist/index.html#/enginehonersty',
-  // 住建工程诚信
+  // 招聘
   jobhuntingCheck: path + 'egov/weixin/index/dist/index.html#/jobhunting'
 }
 module.exports = pathOpts;
